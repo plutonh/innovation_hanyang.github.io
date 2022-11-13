@@ -27,9 +27,9 @@ while a:
          f.write(text)
          f.close()
         if can == 10:
-         origin = repo.remote(name = 'origin')
-         origin.pull()
-         repo.index.add(['index.html'])
+         #origin = repo.remote(name = 'origin')
+         #origin.pull()
+         repo.index.add(['index.html'],['test.py'])
          repo.index.commit('commit from python')
          origin = repo.remote(name = 'origin')
          origin.push()

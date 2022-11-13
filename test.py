@@ -5,7 +5,7 @@ import re
 port = '/dev/ttyACM0'
 brate = 9600 #boudrate
 cmd = 'temp'
-repo = Repo('/home/plutonh')
+repo = Repo('/home/plutonh/.git')
 
 seri = serial.Serial(port, baudrate = brate, timeout = None)
 print(seri.name)
@@ -29,9 +29,9 @@ while a:
         if can == 10:
          #origin = repo.remote(name = 'origin')
          #origin.pull()
-         repo.index.add(['index.html'],['test.py'])
+         repo.index.add(['index.html'])
          repo.index.commit('commit from python')
          origin = repo.remote(name = 'origin')
-         origin.push()
-         #repo.git.push(force=True)
+         #origin.push()
+         repo.git.push("--set-upstream", "origin", "master")
          can = 0

@@ -31,7 +31,7 @@ while a:
         with open('/home/plutonh/index.html', 'w') as f:
          f.write(text)
          f.close()
-        if can == 500:
+        if can == 10:
          repo.index.add(['index.html'])
          repo.index.add(['test.py'])
          repo.index.commit(changed_time)

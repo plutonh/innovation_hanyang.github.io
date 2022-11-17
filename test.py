@@ -28,7 +28,7 @@ while a:
         text = text.replace('time', changed_time)
 
         can = can + 1
-        #print(content[:-2].decode(), '\n', can)
+        print(content[:-2].decode(), '\n', can)
 
         with open('/home/plutonh/index.html', 'w') as f:
          f.write(text)

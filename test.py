@@ -34,7 +34,7 @@ while a:
          f.write(text)
          f.close()
 
-        if can == 10:
+        if can == 500: #approximately 30 seconds
          repo.index.add(['index.html'])
          repo.index.add(['test.py'])
          repo.index.commit(changed_time)

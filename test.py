@@ -51,6 +51,7 @@ while a:
             print(can)
             repo.index.add(['index.html'])
             repo.index.add(['test.py'])
+            repo.index.add(['Final_code.ino'])
             repo.index.commit(changed_time)
             origin = repo.remote(name = 'origin')
             subprocess.call("git push -u origin master", shell = True)

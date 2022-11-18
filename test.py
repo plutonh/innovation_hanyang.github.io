@@ -47,6 +47,7 @@ while a:
 
         # adding, commiting and pushing command
         if can == 535: # can == 535: approximately 30 seconds
+            print(can)
             repo.index.add(['index.html'])
             repo.index.add(['test.py'])
             repo.index.commit(changed_time)

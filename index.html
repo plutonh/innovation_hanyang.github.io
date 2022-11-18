@@ -34,7 +34,7 @@
                 <h3 class="lead">The number of people is uploaded to GitHub every 30 seconds, approximztely, and it takes about a minute to be reflected on the Web site.</h3>
                 <br> </dr>
                 <h2 class="btn btn-lg btn-light">State: 여유</h2>
-                <h2 class="btn btn-lg btn-light">Time: 2022-11-18 16:25:16 </h2>
+                <h2 class="btn btn-lg btn-light">Time: 2022-11-18 16:26:19 </h2>
                 <br> </dr>
                 <h1 class="fw-bolder"> </h1>
             </div>
@@ -203,25 +203,25 @@
                             <br></dr>
                             <h3>원리</h3>
                             <li>웹페이지 디자인의 skeleton이 저장된 index_origin.html 파일을 불러와서 '여유' 문자열을 상태메세지(양호, 혼잡 등)으로 
-                                변환하고 '2022-11-18 16:25:16 ' 문자열을 데이터 수신 시각으로 변환한 다음 index.html 파일에 저장합니다.</li>
+                                변환하고 '2022-11-18 16:26:19 ' 문자열을 데이터 수신 시각으로 변환한 다음 index.html 파일에 저장합니다.</li>
                             <li>아두이노로부터 데이터를 수신할 때마다 'can' 변수를 1씩 증가시키며 can == 1070을 만족하기까지 약 1분 정도가 소요됩니다.
                                 깃허브 웹페이지가 새로운 commit을 받을 경우 갱신될 때까지 대략 1분 정도 소요되므로 1분마다 출입 인원수가 갱신되도록 
                                 하였습니다.</li>
-                            <li>git 패키지를 활용하여 파이썬으로 'git add', 'git commit -m changed_2022-11-18 16:25:16 ' 명령을 구현하였으며 subprocess 
+                            <li>git 패키지를 활용하여 파이썬으로 'git add', 'git commit -m changed_2022-11-18 16:26:19 ' 명령을 구현하였으며 subprocess 
                                 패키지를 활용하여 'git push -u origin master' 명령을 구현하였습니다.</li>
                             <prev>from git import Repo
                                 import subprocess
                                 import git
                                 import serial
                                 import re
-                                import 2022-11-18 16:25:16 
+                                import 2022-11-18 16:26:19 
                                 
                                 port = '/dev/ttyACM0'
                                 brate = 9600 #boudrate
                                 cmd = 'temp'
                                 repo = Repo.init('/home/plutonh')
                                 
-                                seri = serial.Serial(port, baudrate = brate, 2022-11-18 16:25:16 out = None)
+                                seri = serial.Serial(port, baudrate = brate, 2022-11-18 16:26:19 out = None)
                                 seri.write(cmd.encode())
                                 #print(seri.name)
                                 
@@ -245,9 +245,9 @@
                                 
                                         text = open('/home/plutonh/index_origin.html', 'r')
                                         text = text.read()
-                                        changed_2022-11-18 16:25:16  = 2022-11-18 16:25:16 .strf2022-11-18 16:25:16 ('%Y-%m-%d %H:%M:%S ', 2022-11-18 16:25:16 .local2022-11-18 16:25:16 (2022-11-18 16:25:16 .2022-11-18 16:25:16 ()))
+                                        changed_2022-11-18 16:26:19  = 2022-11-18 16:26:19 .strf2022-11-18 16:26:19 ('%Y-%m-%d %H:%M:%S ', 2022-11-18 16:26:19 .local2022-11-18 16:26:19 (2022-11-18 16:26:19 .2022-11-18 16:26:19 ()))
                                         text = text.replace('여유', state)
-                                        text = text.replace('2022-11-18 16:25:16 ', changed_2022-11-18 16:25:16 )
+                                        text = text.replace('2022-11-18 16:26:19 ', changed_2022-11-18 16:26:19 )
                                 
                                         can = can + 1
                                         print(content[:-2].decode(), '\n', can)
@@ -260,7 +260,7 @@
                                         if can == 10: # can == 535: approximately 30 seconds
                                             repo.index.add(['index.html'])
                                             repo.index.add(['test.py'])
-                                            repo.index.commit(changed_2022-11-18 16:25:16 )
+                                            repo.index.commit(changed_2022-11-18 16:26:19 )
                                             origin = repo.remote(name = 'origin')
                                             subprocess.call("git push -u origin master", shell = True)
                                             can = 0</prev>

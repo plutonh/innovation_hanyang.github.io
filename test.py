@@ -40,13 +40,14 @@ while a:
 
         can = can + 1
         #print(content[:-2].decode(), '\n', can)
+        print(can)
 
         with open('/home/plutonh/index.html', 'w') as f:
             f.write(text)
             f.close()
 
         # adding, commiting and pushing command
-        if can == 535: # can == 535: approximately 30 seconds
+        if can == 1070: # can == 1070: approximately 1 minute
             print(can)
             repo.index.add(['index.html'])
             repo.index.add(['test.py'])

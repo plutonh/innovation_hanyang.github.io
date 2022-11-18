@@ -39,14 +39,14 @@ while a:
         text = text.replace('time', changed_time)
 
         can = can + 1
-        print(content[:-2].decode(), '\n', can)
+        #print(content[:-2].decode(), '\n', can)
 
         with open('/home/plutonh/index.html', 'w') as f:
             f.write(text)
             f.close()
 
         # adding, commiting and pushing command
-        if can == 10: # can == 535: approximately 30 seconds
+        if can == 535: # can == 535: approximately 30 seconds
             repo.index.add(['index.html'])
             repo.index.add(['test.py'])
             repo.index.commit(changed_time)

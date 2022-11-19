@@ -40,8 +40,8 @@ while a:
 
         can = can + 1
         #print(content[:-2].decode(), '\n', can)
-        print(content[:-2].decode())
-        #print(can)
+        #print(content[:-2].decode())
+        print(can)
 
         with open('/home/plutonh/index.html', 'w') as f:
             f.write(text)

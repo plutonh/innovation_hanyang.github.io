@@ -8,10 +8,10 @@ int Ic; //Sensor ADC Value Storage Variables
 float volts;
 float cm;
 
-int lazer;
+int laser;
 int ultra;
 int i;
-int sum_lazer = 0;
+int sum_laser = 0;
 int sum_Ic = 0;
 int num1 = 8;
 int num2 = 4;
@@ -27,8 +27,8 @@ void setup() {
 void loop() {
   POINT:
   for(i=0;i<num1;i++) {
-    lazer = ReadDistance();
-    sum_lazer+=lazer;
+    laser = ReadDistance();
+    sum_laser+=laser;
   }
   for(i=0;i<num2;i++) {
     Ic = analogRead(Sensor); // Store analog values in sensor storage variables
@@ -36,27 +36,27 @@ void loop() {
     cm = 60.495 * pow(volts,-1.1904); // Calculation of the distance in cm according to the measured
     sum_Ic+=cm;
   }
-  sum_lazer/=num1;
+  sum_laser/=num1;
   sum_Ic/=(num2+2);
   
-  if(((0.1*sum_lazer) < sum_Ic) && (sum_lazer < 600)) {
+  if(((0.1*sum_laser) < sum_Ic) && (sum_laser < 600)) {
     lock --;
     if(lock >= 1) {
       goto POINT;
     }
     while(1) {
-      if(sum_lazer > 600)
+      if(sum_laser > 700)
       {
         count = count + 1;
         break;
       }
-      sum_lazer = ReadDistance();
+      sum_laser = ReadDistance();
     }
   }
-  else if(((0.1*sum_lazer) > sum_Ic) && (sum_Ic < 60)) {
+  else if(((0.1*sum_laser) > sum_Ic) && (sum_Ic < 60)) {
     lock = 10;
     while(1) {
-      if(sum_Ic > 60)
+      if(sum_Ic > 70)
       {
         count = count - 1;
         break;
@@ -68,7 +68,7 @@ void loop() {
   }
   Serial.println(count);
   reset += 1;
-  if(reset > 10000) // approximately 20 minutes 
+  if(reset > 20000) // approximately 20 minutes 
   {
     reset = 0;
     count = 0;
@@ -96,6 +96,6 @@ int ReadDistance() { // Function to read distance data to TOF10120 module
     //Combine two bytes read into one variable
     distance=i2c_rx_buf[0]; // i2c_rx_buf[0] : Top Byte
     distance=distance<<8;
-    distance|=i2c_rx_buf[1]; // i2c_rx_buf[1] : Subbytes
+    distance|=i2c_rx_buf[1]; // i2c_rx_buf[1] : Sub bytes
     return distance;
 }

@@ -1,3 +1,11 @@
+---
+title: IR 센서를 활용한 혼잡도 분석
+author: Nam Jonghyeon, Kim jungun
+date: 2022-12-01 21:40:00 +0900
+categories: [Exhibition,2022년]
+tags: [Namjonghyeon,Kimjungun]
+---
+
 ------------------------------------------
 # IR 센서를 활용한 혼잡도 분석
 
@@ -73,3 +81,5 @@ git 패키지를 활용하여 파이썬으로 'git add', 'git commit -m changed_
 
 *원리
 test.py 코드가 실행되면서 라즈베리파이 내부 저장소의 'index_origin.html'을 가공하여 'index.html' 파일에 저장하고 해당 파일이 원격저장소로 업로드됩니다.
+
+-----

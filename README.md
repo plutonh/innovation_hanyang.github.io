@@ -1,13 +1,3 @@
-# innovation_hanyang.github.io
-
----
-title: IR 센서를 활용한 혼잡도 분석
-author: Nam Jonghyeon, Kim jungun
-date: 2022-12-01 21:40:00 +0900
-categories: [Exhibition,2022년]
-tags: [Namjonghyeon,Kimjungun]
----
-
 ------------------------------------------
 # IR 센서를 활용한 혼잡도 분석
 

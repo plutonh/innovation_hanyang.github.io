@@ -11,10 +11,8 @@ tags: [post,namjonghyeon,kimjungun]
 ## 작품 설명
 연구 내용은 라즈베리 파이, 아두이노 두 가지로 구분할 수 있습니다. 우선 아두이노 부분은 IR 센서와 레이저 센서를 이용하여 사람의 출입 방향을 감지하고 이를 바탕으로 혼잡도를 측정하게 됩니다.
 라즈베리 파이 부분은 깃허브 Repository에서 페이지를 생성한 다음 아두이노에서 보내는 센서 값을 받아 주기적으로 정보를 commit 하는 기능을 구현하게 됩니다.
-<img src="C:/Users/namjo/Desktop/남종현/한양대학교/Github image/innovation_hanyang/1.jpg" width="90%">
-<img src="C:/Users/namjo/Desktop/남종현/한양대학교/Github image/innovation_hanyang/2.jpg" width="90%">
-<img src="C:/Users/namjo/Desktop/남종현/한양대학교/Github image/innovation_hanyang/3.jpg" width="90%">
-<img src="C:/Users/namjo/Desktop/남종현/한양대학교/Github image/innovation_hanyang/4.jpg" width="90%">
+![4](https://user-images.githubusercontent.com/68436389/211976554-d9a147f7-9b86-4bc7-8d29-21a64bfda605.jpg)
+![1](https://user-images.githubusercontent.com/68436389/211976555-29733e6d-8ce1-4a51-bef7-72d6c4961a80.jpg)
 
 
 ## Hardware
